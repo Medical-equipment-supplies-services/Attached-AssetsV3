@@ -1,0 +1,142 @@
+You are a senior frontend developer and UI/UX designer.
+Your task is to create a fully working responsive landing page (web page) strictly according to the technical specification below.
+Do NOT invent content, texts, logos, colors, fonts, or sections. Follow the instructions exactly.
+
+====================
+GENERAL REQUIREMENTS
+====================
+- Technology stack: HTML5, CSS3, JavaScript (no frameworks unless absolutely necessary).
+- Responsive design (desktop, tablet, mobile).
+- Clean, modern medical/tech style.
+- Use smooth animated transitions between sections.
+- Use minimalistic 3D graphic decorative elements (abstract shapes, soft depth, medical-tech aesthetics).
+- Animations must be subtle, professional, and non-distracting.
+- All content must be placed on a single landing page.
+- All texts must be in Russian.
+- Use semantic HTML structure.
+- Code must be clean, readable, and well-structured.
+
+====================
+COLORS
+====================
+Use ONLY the following colors:
+- Primary: #20b4c0
+- Secondary: #0d2d56
+- White: #ffffff
+
+No other colors are allowed (including shades or gradients outside this palette).
+
+====================
+FONTS
+====================
+Use ONLY:
+- "Wix Madefor Display" — for headings
+- "Calibri" — for body text
+
+If fonts are unavailable locally, connect them via web-safe alternatives or font-face with fallback.
+
+====================
+LOGO
+====================
+- The logo image is provided as an attachment.
+- Use EXACTLY the provided logo.
+- Do NOT redesign, recolor, or replace it.
+- The logo must appear:
+  - On the loading screen OR
+  - On the preview / preloader screen before the landing fully loads
+- Use ONLY this logo, even if it seems visually imperfect.
+
+====================
+PAGE STRUCTURE
+====================
+
+1) LOADING / PREVIEW SCREEN
+--------------------------------
+- Fullscreen loading or preview screen.
+- Centered logo (provided image).
+- Subtle animation (fade-in, scale, or soft rotation).
+- After loading, smoothly transition to the main page.
+
+2) SECTION: "О НАС"
+--------------------------------
+- Clear section with readable layout.
+- Use the following text EXACTLY as written (no edits, no paraphrasing):
+
+"Здоровье пациента начинается с надежности оборудования и безупречности материалов. МООС – это полный цикл обеспечения медицинской сферы: от собственного производства современной аппаратуры и фармацевтики до поставки всех необходимых расходных средств. Мы создаем основу для эффективной работы врачей и безопасности каждого пациента.
+
+Наша продукция – это строгий контроль на всех этапах, инновационные разработки и соответствие высочайшим стандартам качества. Мы обеспечиваем клиентов всем комплексом: от сложного диагностического оборудования до таких важных мелочей, как маски и перчатки, организуя стабильные поставки и профессиональный сервис.
+
+Выбирая МООС, вы выбираете уверенность в завтрашнем дне для вашего учреждения. Мы берем на себя все задачи по оснащению, чтобы вы могли полностью сосредоточиться на главном – на оказании помощи. МООС – доверьте нам ваше обеспечение!"
+
+- Add light 3D abstract medical-themed decorative elements.
+- Smooth fade-in or slide-up animation on scroll.
+
+3) SECTION: "КАТАЛОГ"
+--------------------------------
+- Title: "Каталог продукции"
+- Three clickable category cards:
+  - Медицинская мебель
+  - Медицинское оборудование
+  - Расходные материалы
+- Cards must have:
+  - Subtle 3D depth
+  - Hover animation
+  - Placeholder icons or abstract 3D elements (no stock photos)
+- This section is informational (no cart logic).
+
+4) SECTION: "СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ"
+--------------------------------
+- Title: "Специальные предложения"
+- Horizontal scrolling showcase (carousel / slider).
+- 3–4 cards.
+- Each card contains placeholder text like:
+  "Специальное предложение (текст на согласовании)"
+- Smooth auto-scroll + manual navigation arrows.
+- Clean medical-tech visual style.
+
+5) SECTION: "СДЕЛАТЬ ЗАКАЗ"
+--------------------------------
+- Two-column layout.
+
+LEFT COLUMN:
+- Organization info block:
+  - Телефон: +7 (927) 808-80-87
+  - Корпоративная почта: example@company.ru (temporary placeholder)
+
+RIGHT COLUMN:
+- Interactive order form with fields:
+  - Имя
+  - Телефон
+  - Email
+  - Комментарий
+- Submit button (no backend logic, frontend only).
+- Form validation (required fields, email format).
+- Soft hover and focus animations.
+
+6) FOOTER / ORGANIZATION INFO
+--------------------------------
+- Final block at the bottom of the page.
+- Display the following information clearly:
+
+ИНН: 7329023822  
+ОГРН: 1177325003481  
+Адрес: 433513, Ульяновская область, г. Димитровград, пр-кт Автостроителей, зд. 51
+
+====================
+ANIMATIONS & UX
+====================
+- Smooth scrolling between sections.
+- Section reveal animations on scroll.
+- Buttons and cards have hover and press feedback.
+- 3D elements must be subtle and decorative, not distracting.
+
+====================
+FINAL NOTES
+====================
+- Do NOT add extra sections.
+- Do NOT change texts.
+- Do NOT add marketing slogans or invented content.
+- Do NOT change the logo.
+- Result must look like a modern premium medical supplier landing page.
+
+Deliver a complete working page with HTML, CSS, and JavaScript.
