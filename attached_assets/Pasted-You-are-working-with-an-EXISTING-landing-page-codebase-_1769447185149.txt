@@ -1,0 +1,86 @@
+You are working with an EXISTING landing page codebase.
+Your task is to APPLY SPECIFIC CHANGES to the current implementation.
+Do NOT rewrite the project from scratch.
+Modify ONLY the parts explicitly described below.
+Preserve all existing structure, styles, colors, fonts, animations, and content unless stated otherwise.
+
+====================
+CHANGE 1: "О НАС" — ПЛАВАЮЩИЕ ГРАФИЧЕСКИЕ ЭЛЕМЕНТЫ
+====================
+- In the "О нас" section on the main page, add floating decorative graphic elements related to medical equipment.
+- These elements must be:
+  - Abstract / minimalistic representations of medical equipment (e.g. monitor outlines, syringe shapes, diagnostic device silhouettes).
+  - выполнены в лаконичном 3D-стиле.
+  - Semi-transparent.
+  - Non-interactive.
+- Elements should slowly float (parallax / gentle vertical or diagonal motion).
+- Use CSS animations (keyframes) or lightweight JavaScript.
+- They must NOT interfere with text readability.
+- Colors must strictly follow the existing palette:
+  #20b4c0, #0d2d56, #ffffff.
+- The elements should be positioned behind or around the text block.
+- Animation must be smooth and professional (medical-tech aesthetic).
+
+====================
+CHANGE 2: FOOTER — ИСПРАВЛЕНИЕ ЛОГОТИПА
+====================
+- In the bottom final block (footer), fix the logo located on the LEFT side.
+- Current issue: logo is displayed incorrectly (distorted / misaligned / wrong size).
+- Required fix:
+  - Preserve original logo image.
+  - Maintain correct aspect ratio.
+  - Prevent stretching or compression.
+  - Ensure proper alignment within the footer.
+- Use:
+  - max-width
+  - height: auto
+  - object-fit: contain (if needed).
+- The logo must look clean and readable on all screen sizes.
+
+====================
+CHANGE 3: КАТАЛОГ ПРОДУКЦИИ → "МЕДИЦИНСКАЯ МЕБЕЛЬ"
+====================
+- In the "Каталог продукции" section, modify ONLY the card "Медицинская мебель".
+- On hover (desktop) or focus (keyboard), display a dropdown / pop-up list at the BOTTOM of the card.
+
+POP-UP REQUIREMENTS:
+- Appears smoothly (fade + slide up).
+- Positioned directly under the card.
+- Same visual style as the site (medical-tech, clean).
+- Background: white (#ffffff).
+- Text color: #0d2d56.
+- Soft shadow and subtle rounded corners.
+
+CONTENT OF POP-UP:
+Title (bold):
+"В наличии"
+
+List items (exact text, each on a new line):
+- Стулья, табуреты, кресла, секции
+- Медицинские кровати и кушетки
+- Тумбы медицинские и лабораторные
+- Шкафы медицинские и специализированные
+- Столы медицинские и лабораторные
+- Столики медицинские
+- Тележки и мобильная мебель
+- Прочая медицинская мебель
+
+INTERACTION RULES:
+- Pop-up is visible ONLY when hovering over the "Медицинская мебель" card.
+- Other catalog cards remain unchanged.
+- No navigation logic required (informational only).
+
+====================
+GENERAL RULES
+====================
+- Do NOT change texts in other sections.
+- Do NOT modify colors, fonts, or layout globally.
+- Do NOT add new sections.
+- Keep all existing animations and transitions.
+- All new animations must be consistent with the current design language.
+
+====================
+DELIVERABLE
+====================
+- Updated HTML / CSS / JS reflecting ONLY the changes above.
+- Code must be clean and commented where changes are made.

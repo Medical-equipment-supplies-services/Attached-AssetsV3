@@ -219,24 +219,112 @@ function Navbar() {
   );
 }
 
+function MedicalFloatingElements() {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Medical Monitor / Heart Rate Monitor - top right */}
+      <motion.svg
+        className="absolute top-20 right-10 md:right-20 w-24 h-24 md:w-32 md:h-32 opacity-[0.08]"
+        viewBox="0 0 100 100"
+        fill="none"
+        animate={{ 
+          y: [0, -15, 0],
+          x: [0, 5, 0],
+          rotate: [0, 3, 0]
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <rect x="10" y="15" width="80" height="60" rx="5" stroke="#20b4c0" strokeWidth="2" />
+        <rect x="15" y="20" width="70" height="45" rx="3" stroke="#20b4c0" strokeWidth="1.5" />
+        <path d="M20 45 L30 45 L35 30 L45 60 L55 35 L60 50 L70 45 L80 45" stroke="#20b4c0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="35" y="78" width="30" height="8" rx="2" fill="#0d2d56" fillOpacity="0.3" />
+      </motion.svg>
+
+      {/* Syringe - left side */}
+      <motion.svg
+        className="absolute top-1/3 left-5 md:left-16 w-16 h-16 md:w-24 md:h-24 opacity-[0.07]"
+        viewBox="0 0 100 100"
+        fill="none"
+        animate={{ 
+          y: [0, 20, 0],
+          rotate: [45, 50, 45]
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      >
+        <rect x="35" y="10" width="30" height="60" rx="3" stroke="#0d2d56" strokeWidth="2" />
+        <rect x="40" y="5" width="8" height="10" rx="1" fill="#20b4c0" fillOpacity="0.5" />
+        <rect x="52" y="5" width="8" height="10" rx="1" fill="#20b4c0" fillOpacity="0.5" />
+        <path d="M50 70 L50 90" stroke="#0d2d56" strokeWidth="3" strokeLinecap="round" />
+        <path d="M45 75 L55 75" stroke="#0d2d56" strokeWidth="2" />
+        <rect x="38" y="25" width="24" height="35" rx="2" fill="#20b4c0" fillOpacity="0.2" />
+      </motion.svg>
+
+      {/* Stethoscope - bottom right */}
+      <motion.svg
+        className="absolute bottom-32 right-5 md:right-24 w-20 h-20 md:w-28 md:h-28 opacity-[0.06]"
+        viewBox="0 0 100 100"
+        fill="none"
+        animate={{ 
+          y: [0, -12, 0],
+          x: [0, -8, 0]
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      >
+        <path d="M30 20 C30 20 25 35 25 50 C25 70 40 80 50 80 C60 80 75 70 75 50 C75 35 70 20 70 20" stroke="#20b4c0" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+        <circle cx="50" cy="85" r="10" stroke="#0d2d56" strokeWidth="2" fill="#20b4c0" fillOpacity="0.15" />
+        <circle cx="30" cy="15" r="6" fill="#0d2d56" fillOpacity="0.3" />
+        <circle cx="70" cy="15" r="6" fill="#0d2d56" fillOpacity="0.3" />
+      </motion.svg>
+
+      {/* Medical Cross / Plus - center left */}
+      <motion.svg
+        className="absolute top-2/3 left-10 md:left-32 w-12 h-12 md:w-16 md:h-16 opacity-[0.1]"
+        viewBox="0 0 100 100"
+        fill="none"
+        animate={{ 
+          rotate: [0, 90, 0],
+          scale: [1, 1.1, 1]
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <rect x="35" y="10" width="30" height="80" rx="5" fill="#20b4c0" fillOpacity="0.3" />
+        <rect x="10" y="35" width="80" height="30" rx="5" fill="#20b4c0" fillOpacity="0.3" />
+      </motion.svg>
+
+      {/* Pill / Capsule - top center */}
+      <motion.svg
+        className="absolute top-28 left-1/3 w-10 h-10 md:w-14 md:h-14 opacity-[0.08]"
+        viewBox="0 0 100 100"
+        fill="none"
+        animate={{ 
+          y: [0, 10, 0],
+          rotate: [30, 40, 30]
+        }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+      >
+        <rect x="20" y="30" width="60" height="40" rx="20" stroke="#0d2d56" strokeWidth="2" />
+        <line x1="50" y1="30" x2="50" y2="70" stroke="#0d2d56" strokeWidth="1.5" />
+        <rect x="20" y="30" width="30" height="40" rx="20" fill="#20b4c0" fillOpacity="0.2" />
+      </motion.svg>
+
+      {/* Abstract gradient blobs for depth */}
+      <motion.div
+        className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-primary/5 blur-xl"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-secondary/5 blur-2xl"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 10, repeat: Infinity, delay: 1 }}
+      />
+    </div>
+  );
+}
+
 function Decorative3DElements({ variant }: { variant: "about" | "catalog" | "offers" | "order" }) {
   const elements = {
-    about: (
-      <>
-        <motion.div
-          className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-primary/5 blur-xl"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-secondary/5 blur-2xl"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 10, repeat: Infinity, delay: 1 }}
-        />
-        <div className="absolute top-10 right-10 w-4 h-4 rounded-full bg-primary/30 animate-pulse-slow" />
-        <div className="absolute bottom-20 left-20 w-3 h-3 rounded-full bg-primary/40 animate-pulse-slow animation-delay-200" />
-      </>
-    ),
+    about: null,
     catalog: (
       <>
         <motion.div
@@ -326,7 +414,7 @@ function AboutSection() {
 
   return (
     <AnimatedSection id="about" className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-4 bg-white overflow-hidden">
-      <Decorative3DElements variant="about" />
+      <MedicalFloatingElements />
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.h2 
           className="font-heading text-3xl md:text-5xl font-bold text-secondary text-center mb-16"
@@ -380,22 +468,68 @@ function AboutSection() {
   );
 }
 
+function MedicalFurniturePopup() {
+  const items = [
+    "Стулья, табуреты, кресла, секции",
+    "Медицинские кровати и кушетки",
+    "Тумбы медицинские и лабораторные",
+    "Шкафы медицинские и специализированные",
+    "Столы медицинские и лабораторные",
+    "Столики медицинские",
+    "Тележки и мобильная мебель",
+    "Прочая медицинская мебель"
+  ];
+
+  return (
+    <motion.div
+      className="absolute left-0 right-0 top-full mt-2 z-20"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      data-testid="furniture-popup"
+    >
+      <div className="bg-white rounded-md shadow-lg border border-primary/10 p-5">
+        <h4 className="font-heading text-lg font-bold text-secondary mb-3">
+          В наличии
+        </h4>
+        <ul className="space-y-2">
+          {items.map((item, index) => (
+            <li 
+              key={index} 
+              className="text-secondary/80 text-sm flex items-start gap-2"
+            >
+              <span className="text-primary mt-1">•</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  );
+}
+
 function CatalogSection() {
+  const [showFurniturePopup, setShowFurniturePopup] = useState(false);
+  
   const categories = [
     {
       title: "Медицинская мебель",
       icon: Armchair,
-      description: "Современная и эргономичная мебель для медицинских учреждений"
+      description: "Современная и эргономичная мебель для медицинских учреждений",
+      hasPopup: true
     },
     {
       title: "Медицинское оборудование",
       icon: Stethoscope,
-      description: "Высокотехнологичное диагностическое и лечебное оборудование"
+      description: "Высокотехнологичное диагностическое и лечебное оборудование",
+      hasPopup: false
     },
     {
       title: "Расходные материалы",
       icon: Package,
-      description: "Качественные расходные материалы для ежедневной практики"
+      description: "Качественные расходные материалы для ежедневной практики",
+      hasPopup: false
     }
   ];
 
@@ -417,17 +551,23 @@ function CatalogSection() {
           {categories.map((category, index) => (
             <motion.div
               key={category.title}
+              className="relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
+              onMouseEnter={() => category.hasPopup && setShowFurniturePopup(true)}
+              onMouseLeave={() => category.hasPopup && setShowFurniturePopup(false)}
+              onFocus={() => category.hasPopup && setShowFurniturePopup(true)}
+              onBlur={() => category.hasPopup && setShowFurniturePopup(false)}
             >
               <Card 
-                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
+                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-visible"
                 data-testid={`catalog-card-${index}`}
+                tabIndex={category.hasPopup ? 0 : undefined}
               >
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-md"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
@@ -451,6 +591,13 @@ function CatalogSection() {
                   </p>
                 </div>
               </Card>
+              
+              {/* Popup for Медицинская мебель */}
+              <AnimatePresence>
+                {category.hasPopup && showFurniturePopup && (
+                  <MedicalFurniturePopup />
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
@@ -814,11 +961,13 @@ function Footer() {
     <footer className="bg-secondary text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-4">
+          {/* Footer Logo - Fixed sizing and aspect ratio */}
+          <div className="flex items-center shrink-0">
             <img 
               src={logoImage} 
               alt="МООС" 
-              className="h-16 w-auto brightness-0 invert"
+              className="max-w-[180px] md:max-w-[220px] h-auto object-contain brightness-0 invert"
+              style={{ aspectRatio: 'auto' }}
             />
           </div>
           
