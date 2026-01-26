@@ -1,0 +1,97 @@
+You are working with an EXISTING landing page codebase.
+Your task is to UPDATE the section "Специальные предложения".
+Do NOT rebuild the page.
+Modify ONLY the slider content described below.
+Preserve layout, animations, slider logic, and styling.
+
+====================
+SECTION TO MODIFY
+====================
+Section title: "Специальные предложения"
+Component: horizontal scrolling slider / carousel.
+
+====================
+CONTENT REPLACEMENT
+====================
+Replace the FIRST THREE existing slider cards with the following content.
+Do NOT change the total number of slides unless required by the existing logic.
+
+--------------------
+SLIDE 1
+--------------------
+Title:
+"Стационарные УЗИ-аппараты Alpinion E-CUBE 9"
+
+Main text:
+"Всего 799 тыс. рублей!
+(Возможен торг при заказе любой дополнительной позиции из каталога)"
+
+IMAGE REQUIREMENTS:
+- Generate a realistic but clean product-style image.
+- Subject: modern stationary ultrasound machine (Alpinion E-CUBE 9 style).
+- Style: premium medical equipment, white background or clean clinical interior.
+- No visible branding conflicts.
+- Soft shadows, slight 3D depth.
+- Color harmony with site palette.
+- Image must feel trustworthy, professional, and medical-grade.
+
+--------------------
+SLIDE 2
+--------------------
+Title:
+"Индивидуальный план сотрудничества"
+
+Main text:
+"Подберём персональные предложения по стоимости и рассрочке под ваши задачи"
+
+IMAGE REQUIREMENTS:
+- Generate a conceptual medical-business image.
+- Subjects may include:
+  - medical professional + manager
+  - documents, tablet, charts
+  - abstract medical + finance symbols
+- Style: minimalistic, semi-3D, medical-tech.
+- No text baked into the image.
+- Calm, confident, corporate tone.
+
+--------------------
+SLIDE 3
+--------------------
+Title:
+"Комплексная поставка"
+
+Main text:
+"Оборудование + расходные материалы со скидкой 10%"
+
+IMAGE REQUIREMENTS:
+- Generate a composite medical supply image.
+- Show:
+  - medical equipment
+  - consumables (gloves, masks, syringes, packaging)
+- Clean composition, slight 3D effect.
+- Visual emphasis on completeness and system approach.
+- Medical warehouse / clinical supply aesthetic.
+
+====================
+DESIGN & UX RULES
+====================
+- Images must match existing card proportions.
+- Use lazy loading if already implemented.
+- Keep all hover effects and animations unchanged.
+- Ensure text remains readable over images (use overlays if needed).
+- No aggressive colors — strictly follow the existing palette visually.
+
+====================
+TECHNICAL NOTES
+====================
+- Images may be generated using AI image generation or placeholders replaced with generated assets.
+- Generated images must be embedded correctly and optimized for web.
+- Do NOT add watermarks or captions inside images.
+- Do NOT alter slider behavior (autoscroll, arrows, timing).
+
+====================
+FINAL CHECK
+====================
+- Only the first three slides are replaced.
+- Section title remains unchanged.
+- Visual style remains medical, premium, and trustworthy.

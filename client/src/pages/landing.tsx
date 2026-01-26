@@ -20,6 +20,9 @@ import {
   X
 } from "lucide-react";
 import logoImage from "@assets/Беда_1769444292448.png";
+import offerUltrasoundImage from "@/assets/images/offer-ultrasound.png";
+import offerPartnershipImage from "@/assets/images/offer-partnership.png";
+import offerSuppliesImage from "@/assets/images/offer-supplies.png";
 
 function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -605,11 +608,28 @@ function CatalogSection() {
 
 function OffersSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
   const offers = [
-    "Специальное предложение (текст на согласовании)",
-    "Специальное предложение (текст на согласовании)",
-    "Специальное предложение (текст на согласовании)",
-    "Специальное предложение (текст на согласовании)"
+    {
+      title: "Стационарные УЗИ-аппараты Alpinion E-CUBE 9",
+      text: "Всего 799 тыс. рублей!\n(Возможен торг при заказе любой дополнительной позиции из каталога)",
+      image: offerUltrasoundImage
+    },
+    {
+      title: "Индивидуальный план сотрудничества",
+      text: "Подберём персональные предложения по стоимости и рассрочке под ваши задачи",
+      image: offerPartnershipImage
+    },
+    {
+      title: "Комплексная поставка",
+      text: "Оборудование + расходные материалы со скидкой 10%",
+      image: offerSuppliesImage
+    },
+    {
+      title: "Специальное предложение",
+      text: "Текст на согласовании",
+      image: null
+    }
   ];
 
   const nextSlide = () => {
@@ -671,14 +691,30 @@ function OffersSection() {
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                       <Card 
-                        className="p-8 bg-gradient-to-br from-secondary to-secondary/90 border-0 text-white min-h-[200px] flex items-center justify-center"
+                        className="relative border-0 text-white min-h-[280px] md:min-h-[320px] overflow-hidden"
                         data-testid={`offer-card-${index}`}
                       >
-                        <div className="text-center">
-                          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                            <Package className="w-8 h-8 text-primary" />
-                          </div>
-                          <p className="text-lg font-medium">{offer}</p>
+                        {offer.image ? (
+                          <>
+                            <img 
+                              src={offer.image} 
+                              alt={offer.title}
+                              className="absolute inset-0 w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/30" />
+                          </>
+                        ) : (
+                          <div className="absolute inset-0 bg-gradient-to-br from-secondary to-secondary/90" />
+                        )}
+                        
+                        <div className="relative z-10 p-6 md:p-8 h-full flex flex-col justify-end">
+                          <h3 className="font-heading text-lg md:text-xl font-bold text-white mb-2">
+                            {offer.title}
+                          </h3>
+                          <p className="text-white/90 text-sm md:text-base whitespace-pre-line">
+                            {offer.text}
+                          </p>
                         </div>
                       </Card>
                     </motion.div>
