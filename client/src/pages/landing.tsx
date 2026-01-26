@@ -224,7 +224,7 @@ function MedicalFloatingElements() {
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Medical Monitor / Heart Rate Monitor - top right */}
       <motion.svg
-        className="absolute top-20 right-10 md:right-20 w-24 h-24 md:w-32 md:h-32 opacity-[0.08]"
+        className="absolute top-16 right-4 md:right-12 w-40 h-40 md:w-56 md:h-56 opacity-20"
         viewBox="0 0 100 100"
         fill="none"
         animate={{ 
@@ -242,7 +242,7 @@ function MedicalFloatingElements() {
 
       {/* Syringe - left side */}
       <motion.svg
-        className="absolute top-1/3 left-5 md:left-16 w-16 h-16 md:w-24 md:h-24 opacity-[0.07]"
+        className="absolute top-1/4 left-2 md:left-8 w-32 h-32 md:w-44 md:h-44 opacity-20"
         viewBox="0 0 100 100"
         fill="none"
         animate={{ 
@@ -261,7 +261,7 @@ function MedicalFloatingElements() {
 
       {/* Stethoscope - bottom right */}
       <motion.svg
-        className="absolute bottom-32 right-5 md:right-24 w-20 h-20 md:w-28 md:h-28 opacity-[0.06]"
+        className="absolute bottom-24 right-2 md:right-16 w-36 h-36 md:w-48 md:h-48 opacity-20"
         viewBox="0 0 100 100"
         fill="none"
         animate={{ 
@@ -278,7 +278,7 @@ function MedicalFloatingElements() {
 
       {/* Medical Cross / Plus - center left */}
       <motion.svg
-        className="absolute top-2/3 left-10 md:left-32 w-12 h-12 md:w-16 md:h-16 opacity-[0.1]"
+        className="absolute top-2/3 left-6 md:left-24 w-24 h-24 md:w-32 md:h-32 opacity-20"
         viewBox="0 0 100 100"
         fill="none"
         animate={{ 
@@ -293,7 +293,7 @@ function MedicalFloatingElements() {
 
       {/* Pill / Capsule - top center */}
       <motion.svg
-        className="absolute top-28 left-1/3 w-10 h-10 md:w-14 md:h-14 opacity-[0.08]"
+        className="absolute top-20 left-1/3 w-20 h-20 md:w-28 md:h-28 opacity-20"
         viewBox="0 0 100 100"
         fill="none"
         animate={{ 
@@ -309,12 +309,12 @@ function MedicalFloatingElements() {
 
       {/* Abstract gradient blobs for depth */}
       <motion.div
-        className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-primary/5 blur-xl"
+        className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-primary/10 blur-xl"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity }}
       />
       <motion.div
-        className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-secondary/5 blur-2xl"
+        className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-secondary/10 blur-2xl"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 10, repeat: Infinity, delay: 1 }}
       />
@@ -468,7 +468,7 @@ function AboutSection() {
   );
 }
 
-function MedicalFurniturePopup() {
+function MedicalFurnitureContent() {
   const items = [
     "Стулья, табуреты, кресла, секции",
     "Медицинские кровати и кушетки",
@@ -482,54 +482,52 @@ function MedicalFurniturePopup() {
 
   return (
     <motion.div
-      className="absolute left-0 right-0 top-full mt-2 z-20"
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
-      data-testid="furniture-popup"
+      className="mt-6 pt-6 border-t border-primary/20"
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      data-testid="furniture-content"
     >
-      <div className="bg-white rounded-md shadow-lg border border-primary/10 p-5">
-        <h4 className="font-heading text-lg font-bold text-secondary mb-3">
-          В наличии
-        </h4>
-        <ul className="space-y-2">
-          {items.map((item, index) => (
-            <li 
-              key={index} 
-              className="text-secondary/80 text-sm flex items-start gap-2"
-            >
-              <span className="text-primary mt-1">•</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h4 className="font-heading text-lg font-bold text-secondary mb-3">
+        В наличии
+      </h4>
+      <ul className="space-y-2">
+        {items.map((item, index) => (
+          <li 
+            key={index} 
+            className="text-secondary/80 text-sm flex items-start gap-2"
+          >
+            <span className="text-primary mt-1">•</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
 
 function CatalogSection() {
-  const [showFurniturePopup, setShowFurniturePopup] = useState(false);
+  const [showFurnitureContent, setShowFurnitureContent] = useState(false);
   
   const categories = [
     {
       title: "Медицинская мебель",
       icon: Armchair,
       description: "Современная и эргономичная мебель для медицинских учреждений",
-      hasPopup: true
+      hasExpandableContent: true
     },
     {
       title: "Медицинское оборудование",
       icon: Stethoscope,
       description: "Высокотехнологичное диагностическое и лечебное оборудование",
-      hasPopup: false
+      hasExpandableContent: false
     },
     {
       title: "Расходные материалы",
       icon: Package,
       description: "Качественные расходные материалы для ежедневной практики",
-      hasPopup: false
+      hasExpandableContent: false
     }
   ];
 
@@ -547,24 +545,23 @@ function CatalogSection() {
           Каталог продукции
         </motion.h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-start">
           {categories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              onMouseEnter={() => category.hasPopup && setShowFurniturePopup(true)}
-              onMouseLeave={() => category.hasPopup && setShowFurniturePopup(false)}
-              onFocus={() => category.hasPopup && setShowFurniturePopup(true)}
-              onBlur={() => category.hasPopup && setShowFurniturePopup(false)}
+              onMouseEnter={() => category.hasExpandableContent && setShowFurnitureContent(true)}
+              onMouseLeave={() => category.hasExpandableContent && setShowFurnitureContent(false)}
+              onFocus={() => category.hasExpandableContent && setShowFurnitureContent(true)}
+              onBlur={() => category.hasExpandableContent && setShowFurnitureContent(false)}
             >
               <Card 
-                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-visible"
+                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                 data-testid={`catalog-card-${index}`}
-                tabIndex={category.hasPopup ? 0 : undefined}
+                tabIndex={category.hasExpandableContent ? 0 : undefined}
               >
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-md"
@@ -589,15 +586,15 @@ function CatalogSection() {
                   <p className="text-muted-foreground">
                     {category.description}
                   </p>
+                  
+                  {/* Expandable content for Медицинская мебель */}
+                  <AnimatePresence>
+                    {category.hasExpandableContent && showFurnitureContent && (
+                      <MedicalFurnitureContent />
+                    )}
+                  </AnimatePresence>
                 </div>
               </Card>
-              
-              {/* Popup for Медицинская мебель */}
-              <AnimatePresence>
-                {category.hasPopup && showFurniturePopup && (
-                  <MedicalFurniturePopup />
-                )}
-              </AnimatePresence>
             </motion.div>
           ))}
         </div>
@@ -961,24 +958,14 @@ function Footer() {
     <footer className="bg-secondary text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Footer Logo - Fixed sizing and aspect ratio */}
-          <div className="flex items-center shrink-0">
-            <img 
-              src={logoImage} 
-              alt="МООС" 
-              className="max-w-[180px] md:max-w-[220px] h-auto object-contain brightness-0 invert"
-              style={{ aspectRatio: 'auto' }}
-            />
-          </div>
-          
-          <div className="text-center md:text-right space-y-2 text-white/80">
-            <p className="flex items-center gap-2 justify-center md:justify-end">
+          <div className="text-center md:text-left space-y-2 text-white/80">
+            <p className="flex items-center gap-2 justify-center md:justify-start">
               <span className="text-primary font-medium">ИНН:</span> 7329023822
             </p>
-            <p className="flex items-center gap-2 justify-center md:justify-end">
+            <p className="flex items-center gap-2 justify-center md:justify-start">
               <span className="text-primary font-medium">ОГРН:</span> 1177325003481
             </p>
-            <p className="flex items-center gap-2 justify-center md:justify-end">
+            <p className="flex items-center gap-2 justify-center md:justify-start">
               <MapPin className="w-4 h-4 text-primary shrink-0" />
               <span>433513, Ульяновская область, г. Димитровград, пр-кт Автостроителей, зд. 51</span>
             </p>
