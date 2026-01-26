@@ -15,7 +15,9 @@ import {
   Armchair,
   Stethoscope,
   Package,
-  Send
+  Send,
+  Menu,
+  X
 } from "lucide-react";
 import logoImage from "@assets/Беда_1769444292448.png";
 
@@ -41,7 +43,7 @@ function LoadingScreen({ onComplete }: { onComplete: () => void }) {
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
         <motion.div 
-          className="mt-8 w-48 h-1 bg-muted rounded-full overflow-hidden"
+          className="mt-8 w-48 h-1 bg-primary/20 rounded-full overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -54,33 +56,171 @@ function LoadingScreen({ onComplete }: { onComplete: () => void }) {
           />
         </motion.div>
       </div>
-      <Decorative3DElements variant="loading" />
+      
+      <motion.div
+        className="absolute top-20 left-16 w-3 h-3 rounded-full bg-primary/30"
+        animate={{ y: [0, -10, 0], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-32 right-24 w-2 h-2 rounded-full bg-primary/40"
+        animate={{ y: [0, 8, 0], opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+      />
+      <motion.div
+        className="absolute top-1/3 right-16 w-2 h-2 rounded-full bg-primary/25"
+        animate={{ x: [0, 10, 0], opacity: [0.25, 0.5, 0.25] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      />
     </motion.div>
   );
 }
 
-function Decorative3DElements({ variant }: { variant: "loading" | "about" | "catalog" | "offers" | "order" }) {
+function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: "#about", label: "О нас" },
+    { href: "#catalog", label: "Каталог" },
+    { href: "#offers", label: "Предложения" },
+    { href: "#order", label: "Заказать" },
+  ];
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  return (
+    <>
+      <motion.nav
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled 
+            ? "bg-white/95 backdrop-blur-md shadow-lg" 
+            : "bg-transparent"
+        }`}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, delay: 2.5 }}
+      >
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            <motion.a
+              href="#"
+              className="flex items-center"
+              whileHover={{ scale: 1.02 }}
+              data-testid="link-logo"
+            >
+              <img 
+                src={logoImage} 
+                alt="МООС" 
+                className="h-14 w-auto"
+              />
+            </motion.a>
+
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <motion.button
+                  key={link.href}
+                  onClick={() => scrollToSection(link.href)}
+                  className={`font-heading font-medium transition-colors ${
+                    isScrolled ? "text-secondary hover:text-primary" : "text-secondary hover:text-primary"
+                  }`}
+                  whileHover={{ y: -2 }}
+                  data-testid={`nav-${link.href.slice(1)}`}
+                >
+                  {link.label}
+                </motion.button>
+              ))}
+              <Button 
+                onClick={() => scrollToSection("#order")}
+                className="bg-primary hover:bg-primary/90 text-white"
+                data-testid="nav-button-order"
+              >
+                Связаться
+              </Button>
+            </div>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(true)}
+              data-testid="button-mobile-menu"
+            >
+              <Menu className="w-6 h-6" />
+            </Button>
+          </div>
+        </div>
+      </motion.nav>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-white"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex flex-col h-full p-6">
+              <div className="flex items-center justify-between mb-12">
+                <img src={logoImage} alt="МООС" className="h-12 w-auto" />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  data-testid="button-close-mobile-menu"
+                >
+                  <X className="w-6 h-6" />
+                </Button>
+              </div>
+              
+              <div className="flex flex-col gap-6">
+                {navLinks.map((link, index) => (
+                  <motion.button
+                    key={link.href}
+                    onClick={() => scrollToSection(link.href)}
+                    className="font-heading text-2xl font-medium text-secondary hover:text-primary text-left"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    {link.label}
+                  </motion.button>
+                ))}
+              </div>
+              
+              <div className="mt-auto">
+                <Button 
+                  onClick={() => scrollToSection("#order")}
+                  className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg"
+                >
+                  Связаться с нами
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
+
+function Decorative3DElements({ variant }: { variant: "about" | "catalog" | "offers" | "order" }) {
   const elements = {
-    loading: (
-      <>
-        <motion.div
-          className="absolute top-20 left-10 w-16 h-16 rounded-full bg-primary/10"
-          animate={{ y: [0, -15, 0], rotate: [0, 180, 360] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-32 right-20 w-24 h-24 rounded-lg bg-secondary/10"
-          style={{ transform: "rotate(45deg)" }}
-          animate={{ y: [0, 10, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-primary/5"
-          animate={{ x: [0, 20, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </>
-    ),
     about: (
       <>
         <motion.div
@@ -105,9 +245,8 @@ function Decorative3DElements({ variant }: { variant: "loading" | "about" | "cat
           transition={{ duration: 7, repeat: Infinity }}
         />
         <motion.div
-          className="absolute -bottom-10 right-1/3 w-24 h-24 rounded-lg bg-secondary/5 blur-lg"
-          style={{ transform: "rotate(15deg)" }}
-          animate={{ rotate: [15, 25, 15] }}
+          className="absolute -bottom-10 right-1/3 w-24 h-24 rounded-full bg-secondary/5 blur-lg"
+          animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 9, repeat: Infinity }}
         />
       </>
@@ -145,10 +284,12 @@ function Decorative3DElements({ variant }: { variant: "loading" | "about" | "cat
 
 function AnimatedSection({ 
   children, 
-  className = "" 
+  className = "",
+  id
 }: { 
   children: React.ReactNode; 
   className?: string;
+  id?: string;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -156,6 +297,7 @@ function AnimatedSection({
   return (
     <motion.section
       ref={ref}
+      id={id}
       className={className}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -167,12 +309,27 @@ function AnimatedSection({
 }
 
 function AboutSection() {
+  const blocks = [
+    {
+      text: "Здоровье пациента начинается с надежности оборудования и безупречности материалов. МООС – это полный цикл обеспечения медицинской сферы: от собственного производства современной аппаратуры и фармацевтики до поставки всех необходимых расходных средств. Мы создаем условия, в которых врачи могут спасать жизни, не думая о логистике, качестве материалов или своевременности поставок.",
+      delay: 0.1
+    },
+    {
+      text: "Наша продукция – это строгий контроль на всех этапах, инновационные разработки и соответствие высочайшим стандартам качества. Мы обеспечиваем клиентов всем комплексом: от сложного диагностического оборудования до таких важных мелочей, как маски и перчатки, организуя бесперебойное снабжение любого медицинского учреждения.",
+      delay: 0.3
+    },
+    {
+      text: "Выбирая МООС, вы выбираете уверенность в завтрашнем дне для вашего учреждения. Мы берем на себя все задачи по оснащению, чтобы вы могли полностью сосредоточиться на главном – на оказании помощи. МООС – доверьте нам ваше обеспечение!",
+      delay: 0.5
+    }
+  ];
+
   return (
-    <AnimatedSection className="relative py-20 md:py-32 px-4 bg-white overflow-hidden">
+    <AnimatedSection id="about" className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-4 bg-white overflow-hidden">
       <Decorative3DElements variant="about" />
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.h2 
-          className="font-heading text-3xl md:text-5xl font-bold text-secondary text-center mb-12"
+          className="font-heading text-3xl md:text-5xl font-bold text-secondary text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -181,33 +338,42 @@ function AboutSection() {
           О нас
         </motion.h2>
         
-        <div className="space-y-6 text-lg md:text-xl text-secondary/80 leading-relaxed">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Здоровье пациента начинается с надежности оборудования и безупречности материалов. МООС – это полный цикл обеспечения медицинской сферы: от собственного производства современной аппаратуры и фармацевтики до поставки всех необходимых расходных средств. Мы создаем условия, в которых врачи могут спасать жизни, не думая о логистике, качестве материалов или своевременности поставок.
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Наша продукция – это строгий контроль на всех этапах, инновационные разработки и соответствие высочайшим стандартам качества. Мы обеспечиваем клиентов всем комплексом: от сложного диагностического оборудования до таких важных мелочей, как маски и перчатки, организуя бесперебойное снабжение любого медицинского учреждения.
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            Выбирая МООС, вы выбираете уверенность в завтрашнем дне для вашего учреждения. Мы берем на себя все задачи по оснащению, чтобы вы могли полностью сосредоточиться на главном – на оказании помощи. МООС – доверьте нам ваше обеспечение!
-          </motion.p>
+        <div className="grid gap-8 md:gap-10">
+          {blocks.map((block, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30, scale: 0.98 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.7, 
+                delay: block.delay,
+                ease: [0.25, 0.1, 0.25, 1]
+              }}
+            >
+              <Card 
+                className="p-6 md:p-8 bg-white border border-primary/10 shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-testid={`about-block-${index}`}
+              >
+                <div className="flex gap-4 md:gap-6">
+                  <div className="shrink-0">
+                    <motion.div 
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center"
+                      whileHover={{ scale: 1.05, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <span className="font-heading text-xl md:text-2xl font-bold text-primary">
+                        {index + 1}
+                      </span>
+                    </motion.div>
+                  </div>
+                  <p className="text-lg md:text-xl text-secondary/80 leading-relaxed">
+                    {block.text}
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
         </div>
       </div>
     </AnimatedSection>
@@ -234,7 +400,7 @@ function CatalogSection() {
   ];
 
   return (
-    <AnimatedSection className="relative py-20 md:py-32 px-4 bg-muted/30 overflow-hidden">
+    <AnimatedSection id="catalog" className="relative py-20 md:py-32 px-4 bg-muted/30 overflow-hidden">
       <Decorative3DElements variant="catalog" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2 
@@ -257,15 +423,24 @@ function CatalogSection() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               <Card 
-                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover-elevate"
+                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
                 data-testid={`catalog-card-${index}`}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md" />
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
                 
                 <div className="relative z-10">
-                  <div className="w-20 h-20 mb-6 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <motion.div 
+                    className="w-20 h-20 mb-6 rounded-lg bg-primary/10 flex items-center justify-center"
+                    whileHover={{ scale: 1.1, backgroundColor: "rgba(32, 180, 192, 0.2)" }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <category.icon className="w-10 h-10 text-primary" />
-                  </div>
+                  </motion.div>
                   
                   <h3 className="font-heading text-xl font-semibold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
                     {category.title}
@@ -275,13 +450,6 @@ function CatalogSection() {
                     {category.description}
                   </p>
                 </div>
-                
-                <motion.div
-                  className="absolute -bottom-2 -right-2 w-16 h-16 rounded-lg bg-primary/5"
-                  style={{ transform: "rotate(15deg)" }}
-                  whileHover={{ rotate: 25, scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
-                />
               </Card>
             </motion.div>
           ))}
@@ -314,7 +482,7 @@ function OffersSection() {
   }, []);
 
   return (
-    <AnimatedSection className="relative py-20 md:py-32 px-4 bg-white overflow-hidden">
+    <AnimatedSection id="offers" className="relative py-20 md:py-32 px-4 bg-white overflow-hidden">
       <Decorative3DElements variant="offers" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2 
@@ -465,7 +633,7 @@ function OrderSection() {
   };
 
   return (
-    <AnimatedSection className="relative py-20 md:py-32 px-4 bg-muted/30 overflow-hidden">
+    <AnimatedSection id="order" className="relative py-20 md:py-32 px-4 bg-muted/30 overflow-hidden">
       <Decorative3DElements variant="order" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2 
@@ -490,7 +658,11 @@ function OrderSection() {
             </h3>
             
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
+              <motion.div 
+                className="flex items-center gap-4"
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+              >
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
@@ -504,9 +676,13 @@ function OrderSection() {
                     +7 (927) 808-80-87
                   </a>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="flex items-center gap-4">
+              <motion.div 
+                className="flex items-center gap-4"
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+              >
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
@@ -520,7 +696,7 @@ function OrderSection() {
                     example@company.ru
                   </a>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
           
@@ -684,6 +860,7 @@ export default function LandingPage() {
         animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 0.5 }}
       >
+        <Navbar />
         <main className="min-h-screen bg-white">
           <AboutSection />
           <CatalogSection />
