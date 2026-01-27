@@ -23,6 +23,7 @@ import logoImage from "@assets/Беда_1769444292448.png";
 import offerUltrasoundImage from "@/assets/images/offer-ultrasound.png";
 import offerPartnershipImage from "@/assets/images/offer-partnership.png";
 import offerSuppliesImage from "@/assets/images/offer-supplies.png";
+import offerDeliveryImage from "@/assets/images/offer-delivery.png";
 
 function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -687,9 +688,9 @@ function OffersSection() {
       image: offerSuppliesImage
     },
     {
-      title: "Специальное предложение",
-      text: "Текст на согласовании",
-      image: null
+      title: "Бесплатная доставка по всей России",
+      text: "Доставим в любой регион",
+      image: offerDeliveryImage
     }
   ];
 
