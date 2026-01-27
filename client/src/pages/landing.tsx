@@ -510,27 +510,70 @@ function MedicalFurnitureContent() {
   );
 }
 
+function ConsumablesContent() {
+  const items = [
+    "Антисептические и дезинфицирующие средства",
+    "Лекарственные препараты",
+    "Перевязочные материалы и бинты",
+    "Одноразовые медицинские изделия и средства гигиены",
+    "Инструменты и расходники для процедур",
+    "Диагностические средства и тесты",
+    "Канцелярские и хозяйственные товары",
+    "Специализированное оборудование и расходники для аппаратов",
+    "Гинекологические и урологические материалы",
+    "Косметологические и дерматологические средства",
+    "Вакцины и аллергены"
+  ];
+
+  return (
+    <motion.div
+      className="mt-6 pt-6 border-t border-primary/20"
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      data-testid="consumables-content"
+    >
+      <h4 className="font-heading text-lg font-bold text-secondary mb-3">
+        В наличии
+      </h4>
+      <ul className="space-y-2">
+        {items.map((item, index) => (
+          <li 
+            key={index} 
+            className="text-secondary/80 text-sm flex items-start gap-2"
+          >
+            <span className="text-primary mt-1">•</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
 function CatalogSection() {
   const [showFurnitureContent, setShowFurnitureContent] = useState(false);
+  const [showConsumablesContent, setShowConsumablesContent] = useState(false);
   
   const categories = [
     {
       title: "Медицинская мебель",
       icon: Armchair,
       description: "Современная и эргономичная мебель для медицинских учреждений",
-      hasExpandableContent: true
+      expandableType: "furniture" as const
     },
     {
       title: "Медицинское оборудование",
       icon: Stethoscope,
       description: "Высокотехнологичное диагностическое и лечебное оборудование",
-      hasExpandableContent: false
+      expandableType: null
     },
     {
       title: "Расходные материалы",
       icon: Package,
       description: "Качественные расходные материалы для ежедневной практики",
-      hasExpandableContent: false
+      expandableType: "consumables" as const
     }
   ];
 
@@ -549,57 +592,75 @@ function CatalogSection() {
         </motion.h2>
         
         <div className="grid md:grid-cols-3 gap-8 items-start">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              onMouseEnter={() => category.hasExpandableContent && setShowFurnitureContent(true)}
-              onMouseLeave={() => category.hasExpandableContent && setShowFurnitureContent(false)}
-              onFocus={() => category.hasExpandableContent && setShowFurnitureContent(true)}
-              onBlur={() => category.hasExpandableContent && setShowFurnitureContent(false)}
-            >
-              <Card 
-                className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                data-testid={`catalog-card-${index}`}
-                tabIndex={category.hasExpandableContent ? 0 : undefined}
+          {categories.map((category, index) => {
+            const handleMouseEnter = () => {
+              if (category.expandableType === "furniture") setShowFurnitureContent(true);
+              if (category.expandableType === "consumables") setShowConsumablesContent(true);
+            };
+            const handleMouseLeave = () => {
+              if (category.expandableType === "furniture") setShowFurnitureContent(false);
+              if (category.expandableType === "consumables") setShowConsumablesContent(false);
+            };
+            
+            return (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onFocus={handleMouseEnter}
+                onBlur={handleMouseLeave}
               >
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-md"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                
-                <div className="relative z-10">
+                <Card 
+                  className="group relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  data-testid={`catalog-card-${index}`}
+                  tabIndex={category.expandableType ? 0 : undefined}
+                >
                   <motion.div 
-                    className="w-20 h-20 mb-6 rounded-lg bg-primary/10 flex items-center justify-center"
-                    whileHover={{ scale: 1.1, backgroundColor: "rgba(32, 180, 192, 0.2)" }}
+                    className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-md"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                  >
-                    <category.icon className="w-10 h-10 text-primary" />
-                  </motion.div>
+                  />
                   
-                  <h3 className="font-heading text-xl font-semibold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground">
-                    {category.description}
-                  </p>
-                  
-                  {/* Expandable content for Медицинская мебель */}
-                  <AnimatePresence>
-                    {category.hasExpandableContent && showFurnitureContent && (
-                      <MedicalFurnitureContent />
-                    )}
-                  </AnimatePresence>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
+                  <div className="relative z-10">
+                    <motion.div 
+                      className="w-20 h-20 mb-6 rounded-lg bg-primary/10 flex items-center justify-center"
+                      whileHover={{ scale: 1.1, backgroundColor: "rgba(32, 180, 192, 0.2)" }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <category.icon className="w-10 h-10 text-primary" />
+                    </motion.div>
+                    
+                    <h3 className="font-heading text-xl font-semibold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
+                      {category.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground">
+                      {category.description}
+                    </p>
+                    
+                    {/* Expandable content for Медицинская мебель */}
+                    <AnimatePresence>
+                      {category.expandableType === "furniture" && showFurnitureContent && (
+                        <MedicalFurnitureContent />
+                      )}
+                    </AnimatePresence>
+                    
+                    {/* Expandable content for Расходные материалы */}
+                    <AnimatePresence>
+                      {category.expandableType === "consumables" && showConsumablesContent && (
+                        <ConsumablesContent />
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </AnimatedSection>
