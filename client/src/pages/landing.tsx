@@ -688,7 +688,7 @@ function OffersSection() {
       image: offerSuppliesImage
     },
     {
-      title: "Бесплатная доставка по всей России",
+      title: "Доставка по всей России",
       text: "Доставим в любой регион",
       image: offerDeliveryImage
     }
