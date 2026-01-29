@@ -950,11 +950,11 @@ function OrderSection() {
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Корпоративная почта</p>
                   <a 
-                    href="mailto:example@company.ru" 
+                    href="mailto:nmkorolev@mooc.group" 
                     className="text-lg font-medium text-secondary hover:text-primary transition-colors"
                     data-testid="link-email"
                   >
-                    example@company.ru
+                    nmkorolev@mooc.group
                   </a>
                 </div>
               </motion.div>
