@@ -855,15 +855,34 @@ function OrderSection() {
     
     setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в ближайшее время.",
-    });
-    
-    setFormData({ name: "", phone: "", email: "", comment: "" });
-    setIsSubmitting(false);
+    try {
+      const response = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit order");
+      }
+
+      toast({
+        title: "Заявка отправлена!",
+        description: "Мы свяжемся с вами в ближайшее время.",
+      });
+      
+      setFormData({ name: "", phone: "", email: "", comment: "" });
+    } catch (error) {
+      toast({
+        title: "Ошибка отправки",
+        description: "Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
