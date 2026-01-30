@@ -553,8 +553,59 @@ function ConsumablesContent() {
   );
 }
 
+function MedicalEquipmentContent() {
+  const items = [
+    "Акушерство и гинекология",
+    "Анестезиология и реанимация",
+    "Неонатология",
+    "Эндоскопия",
+    "Хирургия",
+    "Лучевая диагностика",
+    "Ультразвуковая диагностика",
+    "Функциональная диагностика",
+    "Кардиология",
+    "Лабораторная диагностика",
+    "ЛОР-оборудование",
+    "Офтальмология",
+    "Физиотерапия",
+    "Реабилитация и восстановительная медицина",
+    "Стерилизация и инфекционный контроль",
+    "Урология",
+    "Неврология",
+    "Онкология",
+    "Косметология"
+  ];
+
+  return (
+    <motion.div
+      className="mt-6 pt-6 border-t border-primary/20"
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      data-testid="equipment-content"
+    >
+      <h4 className="font-heading text-lg font-bold text-secondary mb-3">
+        В наличии
+      </h4>
+      <ul className="space-y-2">
+        {items.map((item, index) => (
+          <li 
+            key={index} 
+            className="text-secondary/80 text-sm flex items-start gap-2"
+          >
+            <span className="text-primary mt-1">•</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
 function CatalogSection() {
   const [showFurnitureContent, setShowFurnitureContent] = useState(false);
+  const [showEquipmentContent, setShowEquipmentContent] = useState(false);
   const [showConsumablesContent, setShowConsumablesContent] = useState(false);
   
   const categories = [
@@ -568,7 +619,7 @@ function CatalogSection() {
       title: "Медицинское оборудование",
       icon: Stethoscope,
       description: "Высокотехнологичное диагностическое и лечебное оборудование",
-      expandableType: null
+      expandableType: "equipment" as const
     },
     {
       title: "Расходные материалы",
@@ -596,10 +647,12 @@ function CatalogSection() {
           {categories.map((category, index) => {
             const handleMouseEnter = () => {
               if (category.expandableType === "furniture") setShowFurnitureContent(true);
+              if (category.expandableType === "equipment") setShowEquipmentContent(true);
               if (category.expandableType === "consumables") setShowConsumablesContent(true);
             };
             const handleMouseLeave = () => {
               if (category.expandableType === "furniture") setShowFurnitureContent(false);
+              if (category.expandableType === "equipment") setShowEquipmentContent(false);
               if (category.expandableType === "consumables") setShowConsumablesContent(false);
             };
             
@@ -648,6 +701,13 @@ function CatalogSection() {
                     <AnimatePresence>
                       {category.expandableType === "furniture" && showFurnitureContent && (
                         <MedicalFurnitureContent />
+                      )}
+                    </AnimatePresence>
+                    
+                    {/* Expandable content for Медицинское оборудование */}
+                    <AnimatePresence>
+                      {category.expandableType === "equipment" && showEquipmentContent && (
+                        <MedicalEquipmentContent />
                       )}
                     </AnimatePresence>
                     
