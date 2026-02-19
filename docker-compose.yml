@@ -31,10 +31,10 @@ services:
       PORT: 5000
       DATABASE_URL: postgresql://mooc_user:${POSTGRES_PASSWORD:-mooc_secret_password}@db:5432/mooc_db
       SESSION_SECRET: ${SESSION_SECRET}
-      SMTP_HOST: ${SMTP_HOST}
-      SMTP_PORT: ${SMTP_PORT}
-      SMTP_USER: ${SMTP_USER}
-      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_HOST: $smtp.timeweb.ru
+      SMTP_PORT: $465
+      SMTP_USER: $nmkorolev@mooc.group
+      SMTP_PASSWORD: $zfnljirkm8
 
 volumes:
   pgdata:
