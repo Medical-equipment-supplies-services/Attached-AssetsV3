@@ -34,7 +34,7 @@ services:
       SMTP_HOST: smtp.timeweb.ru
       SMTP_PORT: 465
       SMTP_USER: nmkorolev@mooc.group
-      SMTP_PASSWORD: zfnljirkm8
+      SMTP_PASSWORD: LjRXFboR:xTu9)
 
 volumes:
   pgdata:
