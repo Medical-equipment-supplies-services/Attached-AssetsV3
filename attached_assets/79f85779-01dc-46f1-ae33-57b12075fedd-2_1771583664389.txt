@@ -1,0 +1,160 @@
+13:29:05 | DEBUG | HEAD is now at 9bb2c19 Add a file to trigger deployment updates
+13:29:05 | DEBUG | Turn off this advice by setting config variable advice.detachedHead to false
+13:29:05 | DEBUG | git switch -
+13:29:05 | DEBUG | Or undo this operation with:
+13:29:05 | DEBUG | git switch -c <new-branch-name>
+13:29:05 | DEBUG | do so (now or later) by using -c with the switch command. Example:
+13:29:05 | DEBUG | If you want to create a new branch to retain commits you create, you may
+13:29:05 | DEBUG | state without impacting any branches by switching back to a branch.
+13:29:05 | DEBUG | changes and commit them, and you can discard any commits you make in this
+13:29:05 | DEBUG | You are in 'detached HEAD' state. You can look around, make experimental
+13:29:05 | DEBUG | Note: switching to '9bb2c1987aa621d6d8c4554312c46c3221a32bea'.
+13:29:05 | DEBUG | Cloning into '/workspace'...
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 28.31MB / 42.78MB 1.8s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 25.17MB / 42.78MB 1.7s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 22.02MB / 42.78MB 1.5s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 17.83MB / 42.78MB 1.4s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 14.68MB / 42.78MB 1.2s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 11.53MB / 42.78MB 1.1s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 7.34MB / 42.78MB 0.9s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 4.19MB / 42.78MB 0.8s
+13:29:10 | DEBUG | #4 sha256:eb87f4721c91769ed5206f34a9ab6ec98fc1d5235c12c2fc956665b1155e9ecb 1.26MB / 1.26MB 0.6s done
+13:29:10 | DEBUG | #4 sha256:e31b2016552274339ed88ed4a438d78bf37e0f6bdf328d02207b2a598c1ef86d 445B / 445B 0.4s done
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 0B / 42.78MB 0.2s
+13:29:10 | DEBUG | #4 sha256:eb87f4721c91769ed5206f34a9ab6ec98fc1d5235c12c2fc956665b1155e9ecb 0B / 1.26MB 0.2s
+13:29:10 | DEBUG | #4 sha256:e31b2016552274339ed88ed4a438d78bf37e0f6bdf328d02207b2a598c1ef86d 0B / 445B 0.2s
+13:29:10 | DEBUG | #4 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8
+13:29:10 | DEBUG | #5 DONE 0.1s
+13:29:10 | DEBUG | #5 transferring context: 3.99MB 0.1s done
+13:29:10 | DEBUG | #5 [internal] load build context
+13:29:10 | DEBUG | #4 ...
+13:29:10 | DEBUG | #4 resolve docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8 done
+13:29:10 | DEBUG | #4 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8
+13:29:10 | DEBUG | #3 DONE 0.0s
+13:29:10 | DEBUG | #3 transferring context: 118B done
+13:29:10 | DEBUG | #3 [internal] load .dockerignore
+13:29:10 | DEBUG | #2 DONE 1.4s
+13:29:10 | DEBUG | #2 [internal] load metadata for docker.io/library/node:20-alpine
+13:29:10 | DEBUG | #1 DONE 0.0s
+13:29:10 | DEBUG | #1 transferring dockerfile: 600B done
+13:29:10 | DEBUG | #1 [internal] load build definition from Dockerfile
+13:29:10 | DEBUG | Build context directory: /workspace/.
+13:29:10 | DEBUG | Dockerfile directory: /workspace/.
+13:29:10 | INFO | Build started
+13:29:10 | DEBUG | Found Dockerfile in /workspace root
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 32.51MB / 42.78MB 2.0s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 35.65MB / 42.78MB 2.1s
+13:29:10 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 38.80MB / 42.78MB 2.3s
+13:29:11 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 42.78MB / 42.78MB 2.4s
+13:29:11 | DEBUG | #4 extracting sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80
+13:29:11 | DEBUG | #4 sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 42.78MB / 42.78MB 2.4s done
+13:29:12 | DEBUG | #4 DONE 3.5s
+13:29:12 | DEBUG | #4 extracting sha256:ad6d96c196e3198e14ea37df8bba4f54bf92fb525eb65e49fa4027c7dee13f80 1.0s done
+13:29:12 | DEBUG | #6 [builder 2/6] WORKDIR /app
+13:29:12 | DEBUG | #4 DONE 3.6s
+13:29:12 | DEBUG | #4 extracting sha256:e31b2016552274339ed88ed4a438d78bf37e0f6bdf328d02207b2a598c1ef86d 0.0s done
+13:29:12 | DEBUG | #4 extracting sha256:eb87f4721c91769ed5206f34a9ab6ec98fc1d5235c12c2fc956665b1155e9ecb 0.0s done
+13:29:12 | DEBUG | #4 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8
+13:29:12 | DEBUG | #6 DONE 0.3s
+13:29:12 | DEBUG | #7 [builder 3/6] COPY package.json package-lock.json ./
+13:29:12 | DEBUG | #7 DONE 0.4s
+13:29:12 | DEBUG | #8 [builder 4/6] RUN npm ci
+13:29:21 | DEBUG | #8 8.936   run `npm fund` for details
+13:29:21 | DEBUG | #8 8.936 76 packages are looking for funding
+13:29:21 | DEBUG | #8 8.936
+13:29:21 | DEBUG | #8 8.936 added 479 packages, and audited 480 packages in 9s
+13:29:21 | DEBUG | #8 8.936
+13:29:21 | DEBUG | #8 8.949 npm notice
+13:29:21 | DEBUG | #8 8.949 npm notice To update run: npm install -g npm@11.10.1
+13:29:21 | DEBUG | #8 8.949 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.1
+13:29:21 | DEBUG | #8 8.949 npm notice New major version of npm available! 10.8.2 -> 11.10.1
+13:29:21 | DEBUG | #8 8.949 npm notice
+13:29:21 | DEBUG | #8 8.948 Run `npm audit` for details.
+13:29:21 | DEBUG | #8 8.948
+13:29:21 | DEBUG | #8 8.948   npm audit fix
+13:29:21 | DEBUG | #8 8.948 To address all issues, run:
+13:29:21 | DEBUG | #8 8.948
+13:29:21 | DEBUG | #8 8.948 5 vulnerabilities (1 low, 1 moderate, 3 high)
+13:29:21 | DEBUG | #8 8.948
+13:29:22 | DEBUG | #8 DONE 9.7s
+13:29:22 | DEBUG | #9 [builder 5/6] COPY . .
+13:29:22 | DEBUG | #9 DONE 0.3s
+13:29:22 | DEBUG | #10 [builder 6/6] RUN npm run build
+13:29:22 | DEBUG | #10 0.217
+13:29:22 | DEBUG | #10 0.217 > tsx script/build.ts
+13:29:22 | DEBUG | #10 0.217 > rest-express@1.0.0 build
+13:29:22 | DEBUG | #10 0.217
+13:29:23 | DEBUG | #10 1.093 building client...
+13:29:24 | DEBUG | #10 1.176 vite v7.3.0 building client environment for production...
+13:29:24 | DEBUG | #10 1.888 transforming...
+13:29:25 | DEBUG | #10 2.994 A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+13:29:25 | DEBUG | #10 2.994
+13:29:28 | DEBUG | #10 5.714 ✓ 2004 modules transformed.
+13:29:28 | DEBUG | #10 5.996 rendering chunks...
+13:29:28 | DEBUG | #10 6.097 ⚡ Done in 59ms
+13:29:28 | DEBUG | #10 6.097
+13:29:28 | DEBUG | #10 6.097   dist/index.cjs  1.0mb ⚠️
+13:29:28 | DEBUG | #10 6.097
+13:29:28 | DEBUG | #10 6.026 building server...
+13:29:28 | DEBUG | #10 6.026 ✓ built in 4.19s
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/index-Dz8pQaGV.js                  402.50 kB │ gzip: 130.30 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/index-CIc7BBom.css                  76.93 kB │ gzip:  12.58 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/offer-supplies-DMLIJaMC.png      1,168.10 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/offer-partnership-Ck41DnIG.png   1,068.24 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/offer-delivery-RolAbGc0.png        639.23 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/offer-ultrasound-DbQuMvMW.png      476.94 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/assets/Беда_1769444292448-Db4vUBtl.png     40.15 kB
+13:29:28 | DEBUG | #10 6.026 ../dist/public/index.html                                  1.18 kB │ gzip:   0.67 kB
+13:29:28 | DEBUG | #10 6.007 computing gzip size...
+13:29:28 | DEBUG | #10 DONE 6.2s
+13:29:29 | DEBUG | #11 [runner 3/6] COPY --from=builder /app/dist ./dist
+13:29:29 | DEBUG | #11 DONE 0.2s
+13:29:29 | DEBUG | #14 [runner 6/6] RUN npm ci --omit=dev
+13:29:29 | DEBUG | #13 DONE 0.0s
+13:29:29 | DEBUG | #13 [runner 5/6] COPY --from=builder /app/package-lock.json ./
+13:29:29 | DEBUG | #12 DONE 0.0s
+13:29:29 | DEBUG | #12 [runner 4/6] COPY --from=builder /app/package.json ./
+13:29:36 | DEBUG | #14 6.396   run `npm fund` for details
+13:29:36 | DEBUG | #14 6.396 61 packages are looking for funding
+13:29:36 | DEBUG | #14 6.396
+13:29:36 | DEBUG | #14 6.396 added 372 packages, and audited 373 packages in 6s
+13:29:36 | DEBUG | #14 6.396
+13:29:36 | DEBUG | #14 6.403 npm notice
+13:29:36 | DEBUG | #14 6.402 Run `npm audit` for details.
+13:29:36 | DEBUG | #14 6.402
+13:29:36 | DEBUG | #14 6.402   npm audit fix
+13:29:36 | DEBUG | #14 6.402 To address all issues, run:
+13:29:36 | DEBUG | #14 6.402
+13:29:36 | DEBUG | #14 6.402 5 vulnerabilities (1 low, 1 moderate, 3 high)
+13:29:36 | DEBUG | #14 6.402
+13:29:36 | DEBUG | #14 6.403 npm notice
+13:29:36 | DEBUG | #14 6.403 npm notice To update run: npm install -g npm@11.10.1
+13:29:36 | DEBUG | #14 6.403 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.1
+13:29:36 | DEBUG | #14 6.403 npm notice New major version of npm available! 10.8.2 -> 11.10.1
+13:29:37 | DEBUG | #14 DONE 7.6s
+13:29:37 | DEBUG | #15 exporting layers
+13:29:37 | DEBUG | #15 exporting to image
+13:29:46 | DEBUG | #15 exporting layers 9.2s done
+13:29:46 | DEBUG | #15 pushing layers
+13:29:46 | DEBUG | #15 exporting config sha256:a44e0d31846181215e19b59fd87a573b7be762722441a798b4768e6f2df06bb4 done
+13:29:46 | DEBUG | #15 exporting manifest sha256:b2cf888a5b1c9692447e0e20452bce40454b80015bb4d09841f5f23d4f739f7d done
+13:29:46 | DEBUG | #15 exporting to image
+13:29:46 | DEBUG | #16 DONE 0.0s
+13:29:46 | DEBUG | #15 ...
+13:29:46 | DEBUG | #15 ...
+13:29:46 | DEBUG | #15 exporting to image
+13:29:46 | DEBUG | #17 DONE 0.0s
+13:29:59 | DEBUG | #15 pushing layers 12.5s done
+13:29:59 | DEBUG | #15 DONE 22.0s
+13:29:59 | INFO | Build succeeded
+13:31:08 | INFO | Pulling image from registry
+13:31:35 | INFO | Successfully pulled
+13:31:35 | INFO | Starting container
+13:31:36 | INFO | Scanning for exposed ports
+13:31:36 | INFO | Found 1 HTTP ports: ['5000/tcp']
+13:31:36 | INFO | Container started
+13:31:36 | INFO | Checking app's health
+13:31:36 | INFO | Waiting for container healthcheck to pass
+13:31:36 | INFO | Health status: starting
+13:32:41 | INFO | Health status: unhealthy
+13:32:41 | ERROR | Deploy failed
