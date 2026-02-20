@@ -1,0 +1,468 @@
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/button.tsx',
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/breadcrumb.tsx',
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/badge.tsx',
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/avatar.tsx',
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/aspect-ratio.tsx',
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/alert.tsx',
+13:16:49 | DEBUG | #10 6.561     '/app/client/src/components/ui/alert-dialog.tsx',
+13:16:49 | DEBUG | #10 6.561 }
+13:16:49 | DEBUG | #10 6.561   ]
+13:16:49 | DEBUG | #10 6.561     ... 996 more items
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/query-core/build/modern/retryer.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/suspense.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/errorBoundaryUtils.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/use-sync-external-store/shim/index.js',
+13:16:49 | DEBUG | #10 6.561     'src/assets/images/offer-delivery.png',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/scheduler/index.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/framer-motion/dist/es/index.mjs',
+13:16:49 | DEBUG | #10 6.561     'src/assets/images/offer-ultrasound.png',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/lucide-react/dist/esm/lucide-react.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@radix-ui/react-tooltip/dist/index.mjs',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/react/cjs/react.production.min.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useMutation.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/isRestoring.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useMutationState.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useInfiniteQuery.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useIsFetching.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/QueryErrorResetBoundary.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/infiniteQueryOptions.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/HydrationBoundary.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/usePrefetchInfiniteQuery.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/queryOptions.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/usePrefetchQuery.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useQuery.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseQueries.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseInfiniteQuery.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseQuery.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/query-core/build/modern/index.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/types.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/@tanstack/react-query/build/modern/useQueries.js',
+13:16:49 | DEBUG | #10 6.561     '/app/node_modules/regexparam/dist/index.mjs',
+13:16:49 | DEBUG | #10 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+13:16:56 | DEBUG | ------
+13:16:56 | DEBUG | 6.561 }
+13:16:56 | DEBUG | 6.561   ]
+13:16:56 | DEBUG | 6.561     ... 996 more items
+13:16:56 | DEBUG | 6.561     '/app/node_modules/@tanstack/query-core/build/modern/retryer.js',
+13:16:56 | DEBUG | 6.561     '/app/node_modules/@tanstack/react-query/build/modern/suspense.js',
+13:16:56 | DEBUG | 6.561     '/app/node_modules/@tanstack/react-query/build/modern/errorBoundaryUtils.js',
+13:16:56 | DEBUG | 6.561     '/app/node_modules/use-sync-external-store/shim/index.js',
+13:16:56 | DEBUG | 6.561     'src/assets/images/offer-delivery.png',
+13:16:56 | DEBUG | 6.561     '/app/node_modules/scheduler/index.js',
+13:16:56 | DEBUG | 6.561     '/app/node_modules/framer-motion/dist/es/index.mjs',
+13:16:56 | DEBUG | > [builder 6/6] RUN npm run build:
+13:16:56 | DEBUG | ------
+13:16:56 | DEBUG | 10 |
+13:16:56 | INFO | error: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+13:16:56 | DEBUG | --------------------
+13:16:56 | DEBUG | 11 |     FROM node:20-alpine AS runner
+13:16:56 | DEBUG | 9 | >>> RUN npm run build
+13:16:56 | DEBUG | 8 |     COPY . .
+13:16:56 | DEBUG | 7 |
+13:16:56 | DEBUG | --------------------
+13:16:56 | DEBUG | Dockerfile:9
+13:16:56 | INFO | Build failed
+13:17:11 | DEBUG | If you want to create a new branch to retain commits you create, you may
+13:17:11 | DEBUG | HEAD is now at 7abd246 Update docker-compose.yml
+13:17:11 | DEBUG | Turn off this advice by setting config variable advice.detachedHead to false
+13:17:11 | DEBUG | git switch -
+13:17:11 | DEBUG | Or undo this operation with:
+13:17:11 | DEBUG | git switch -c <new-branch-name>
+13:17:11 | DEBUG | do so (now or later) by using -c with the switch command. Example:
+13:17:11 | DEBUG | state without impacting any branches by switching back to a branch.
+13:17:11 | DEBUG | changes and commit them, and you can discard any commits you make in this
+13:17:11 | DEBUG | You are in 'detached HEAD' state. You can look around, make experimental
+13:17:11 | DEBUG | Note: switching to '7abd246ceb891f7338146b3e0dbd4bf6686226c3'.
+13:17:11 | DEBUG | Cloning into '/workspace'...
+13:17:16 | DEBUG | #10 0.613
+13:17:16 | DEBUG | #10 0.613 > tsx script/build.ts
+13:17:16 | DEBUG | #10 0.613 > rest-express@1.0.0 build
+13:17:16 | DEBUG | #10 0.613
+13:17:16 | DEBUG | #10 [builder 6/6] RUN npm run build
+13:17:16 | DEBUG | #9 CACHED
+13:17:16 | DEBUG | #9 [builder 5/6] COPY . .
+13:17:16 | DEBUG | #8 CACHED
+13:17:16 | DEBUG | #8 [builder 4/6] RUN npm ci
+13:17:16 | DEBUG | #7 CACHED
+13:17:16 | DEBUG | #7 [builder 3/6] COPY package.json package-lock.json ./
+13:17:16 | DEBUG | #6 DONE 0.1s
+13:17:16 | DEBUG | #6 transferring context: 3.90MB 0.1s done
+13:17:16 | DEBUG | #6 [internal] load build context
+13:17:16 | DEBUG | #5 CACHED
+13:17:16 | DEBUG | #5 [builder 2/6] WORKDIR /app
+13:17:16 | DEBUG | #4 DONE 0.0s
+13:17:16 | DEBUG | #4 resolve docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8 0.0s done
+13:17:16 | DEBUG | #4 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8
+13:17:16 | DEBUG | #3 DONE 0.0s
+13:17:16 | DEBUG | #3 transferring context: 134B done
+13:17:16 | DEBUG | #3 [internal] load .dockerignore
+13:17:16 | DEBUG | #2 DONE 0.5s
+13:17:16 | DEBUG | #2 [internal] load metadata for docker.io/library/node:20-alpine
+13:17:16 | DEBUG | #1 DONE 0.0s
+13:17:16 | DEBUG | #1 transferring dockerfile: 600B done
+13:17:16 | DEBUG | #1 [internal] load build definition from Dockerfile
+13:17:16 | DEBUG | Build context directory: /workspace/.
+13:17:16 | DEBUG | Dockerfile directory: /workspace/.
+13:17:16 | INFO | Build started
+13:17:16 | DEBUG | Found Dockerfile in /workspace root
+13:17:17 | DEBUG | #10 2.216 building client...
+13:17:17 | DEBUG | #10 2.560 vite v7.3.0 building client environment for production...
+13:17:19 | DEBUG | #10 4.607 transforming...
+13:17:21 | DEBUG | #10 6.802 A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+13:17:21 | DEBUG | #10 6.802
+13:17:23 | DEBUG | #10 8.801 ✓ 1052 modules transformed.
+13:17:24 | INFO | #10 9.129 ✗ Build failed in 6.12s
+13:17:24 | DEBUG | #10 9.135   errno: -2,
+13:17:24 | DEBUG | #10 9.135     at async Queue.work (/app/node_modules/rollup/dist/es/shared/node-entry.js:22604:32) {
+13:17:24 | DEBUG | #10 9.135     at async <anonymous> (/app/node_modules/rollup/dist/es/shared/node-entry.js:21376:33)
+13:17:24 | DEBUG | #10 9.135     at async PluginDriver.hookFirstAndGetPlugin (/app/node_modules/rollup/dist/es/shared/node-entry.js:22376:28)
+13:17:24 | DEBUG | #10 9.135     at async Object.handler (/app/node_modules/vite/dist/node/chunks/config.js:8671:17)
+13:17:24 | DEBUG | #10 9.135     at async fileToBuiltUrl (/app/node_modules/vite/dist/node/chunks/config.js:8777:18)
+13:17:24 | DEBUG | #10 9.135     at async Object.readFile (node:internal/fs/promises:1236:14)
+13:17:24 | DEBUG | #10 9.135     at async open (node:internal/fs/promises:634:25)
+13:17:24 | DEBUG | #10 9.135 [vite:asset] Could not load /app/attached_assets/Беда_1769444292448.png (imported by client/src/pages/landing.tsx): ENOENT: no such file or directory, open '/app/attached_assets/Беда_1769444292448.png'
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/navigation-menu.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/menubar.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/label.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/input.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/input-otp.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/hover-card.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/form.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/dropdown-menu.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/drawer.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/dialog.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/context-menu.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/command.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/collapsible.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/checkbox.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/chart.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/carousel.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/card.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/calendar.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/button.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/breadcrumb.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/badge.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/avatar.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/aspect-ratio.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/alert.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/alert-dialog.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/accordion.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/lib/utils.ts',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/hooks/use-toast.ts',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react-dom/cjs/react-dom.production.min.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react/index.js',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/tooltip.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/pages/landing.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/toaster.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/wouter/esm/index.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/index.js',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/lib/queryClient.ts',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react/cjs/react-jsx-runtime.production.min.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react-dom/index.js',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/App.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/index.css',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react/jsx-runtime.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react-dom/client.js',
+13:17:24 | DEBUG | #10 9.135     '/app/package.json',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/main.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/index.html',
+13:17:24 | DEBUG | #10 9.135   watchFiles: [
+13:17:24 | DEBUG | #10 9.135   hook: 'load',
+13:17:24 | DEBUG | #10 9.135   plugin: 'vite:asset',
+13:17:24 | DEBUG | #10 9.135   pluginCode: 'ENOENT',
+13:17:24 | DEBUG | #10 9.135   path: '/app/attached_assets/Беда_1769444292448.png',
+13:17:24 | DEBUG | #10 9.135   syscall: 'open',
+13:17:24 | DEBUG | #10 9.135   code: 'PLUGIN_ERROR',
+13:17:24 | DEBUG | #10 9.135 }
+13:17:24 | DEBUG | #10 9.135   ]
+13:17:24 | DEBUG | #10 9.135     ... 997 more items
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/query-core/build/modern/queryObserver.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/query-core/build/modern/queryCache.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/query-core/build/modern/retryer.js',
+13:17:24 | DEBUG | #10 9.135     'src/assets/images/offer-partnership.png',
+13:17:24 | DEBUG | #10 9.135     'src/assets/images/offer-delivery.png',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/scheduler/index.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/framer-motion/dist/es/index.mjs',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@radix-ui/react-tooltip/dist/index.mjs',
+13:17:24 | DEBUG | #10 9.135     'src/assets/images/offer-ultrasound.png',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/lucide-react/dist/esm/lucide-react.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/react/cjs/react.production.min.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/wouter/esm/use-browser-location.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/regexparam/dist/index.mjs',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/wouter/esm/react-deps.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useInfiniteQuery.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useMutation.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/HydrationBoundary.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/isRestoring.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/QueryErrorResetBoundary.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useIsFetching.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useMutationState.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/infiniteQueryOptions.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/queryOptions.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/usePrefetchInfiniteQuery.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseInfiniteQuery.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/usePrefetchQuery.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseQueries.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseQuery.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useQueries.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/query-core/build/modern/index.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/types.js',
+13:17:24 | DEBUG | #10 9.135     '/app/node_modules/@tanstack/react-query/build/modern/useQuery.js',
+13:17:24 | DEBUG | #10 9.135     '/app/tailwind.config.ts',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/pages/not-found.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/hooks/use-mobile.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/toggle.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/toggle-group.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/toast.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/textarea.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/tabs.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/table.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/switch.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/slider.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/skeleton.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/sidebar.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/sheet.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/separator.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/select.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/scroll-area.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/resizable.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/radio-group.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/progress.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/popover.tsx',
+13:17:24 | DEBUG | #10 9.135     '/app/client/src/components/ui/pagination.tsx',
+13:17:24 | DEBUG | #10 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+13:17:25 | DEBUG | 9.135 }
+13:17:25 | DEBUG | 9.135   ]
+13:17:25 | DEBUG | 9.135     ... 997 more items
+13:17:25 | DEBUG | 9.135     '/app/node_modules/@tanstack/query-core/build/modern/queryObserver.js',
+13:17:25 | DEBUG | 9.135     '/app/node_modules/@tanstack/query-core/build/modern/queryCache.js',
+13:17:25 | DEBUG | 9.135     '/app/node_modules/@tanstack/query-core/build/modern/retryer.js',
+13:17:25 | DEBUG | 9.135     'src/assets/images/offer-partnership.png',
+13:17:25 | DEBUG | 9.135     'src/assets/images/offer-delivery.png',
+13:17:25 | DEBUG | 9.135     '/app/node_modules/scheduler/index.js',
+13:17:25 | DEBUG | 9.135     '/app/node_modules/framer-motion/dist/es/index.mjs',
+13:17:25 | DEBUG | > [builder 6/6] RUN npm run build:
+13:17:25 | DEBUG | ------
+13:17:25 | DEBUG | ------
+13:17:25 | INFO | error: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+13:17:25 | DEBUG | --------------------
+13:17:25 | DEBUG | 11 |     FROM node:20-alpine AS runner
+13:17:25 | DEBUG | 10 |
+13:17:25 | DEBUG | 9 | >>> RUN npm run build
+13:17:25 | DEBUG | 8 |     COPY . .
+13:17:25 | DEBUG | 7 |
+13:17:25 | DEBUG | --------------------
+13:17:25 | DEBUG | Dockerfile:9
+13:17:25 | INFO | Build failed
+13:17:50 | DEBUG | #2 DONE 0.5s
+13:17:50 | DEBUG | #2 [internal] load metadata for docker.io/library/node:20-alpine
+13:17:50 | DEBUG | #1 DONE 0.0s
+13:17:50 | DEBUG | #1 transferring dockerfile: 600B done
+13:17:50 | DEBUG | #1 [internal] load build definition from Dockerfile
+13:17:50 | DEBUG | Build context directory: /workspace/.
+13:17:50 | DEBUG | Dockerfile directory: /workspace/.
+13:17:50 | INFO | Build started
+13:17:50 | DEBUG | Found Dockerfile in /workspace root
+13:17:50 | DEBUG | HEAD is now at 7abd246 Update docker-compose.yml
+13:17:50 | DEBUG | Turn off this advice by setting config variable advice.detachedHead to false
+13:17:50 | DEBUG | git switch -
+13:17:50 | DEBUG | Or undo this operation with:
+13:17:50 | DEBUG | git switch -c <new-branch-name>
+13:17:50 | DEBUG | do so (now or later) by using -c with the switch command. Example:
+13:17:50 | DEBUG | If you want to create a new branch to retain commits you create, you may
+13:17:50 | DEBUG | state without impacting any branches by switching back to a branch.
+13:17:50 | DEBUG | changes and commit them, and you can discard any commits you make in this
+13:17:50 | DEBUG | You are in 'detached HEAD' state. You can look around, make experimental
+13:17:50 | DEBUG | Note: switching to '7abd246ceb891f7338146b3e0dbd4bf6686226c3'.
+13:17:50 | DEBUG | Cloning into '/workspace'...
+13:17:50 | DEBUG | #3 [internal] load .dockerignore
+13:17:51 | DEBUG | #3 DONE 0.1s
+13:17:51 | DEBUG | #3 transferring context: 134B done
+13:17:51 | DEBUG | #4 CACHED
+13:17:51 | DEBUG | #4 resolve docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8 0.0s done
+13:17:51 | DEBUG | #4 [ 1/14] FROM docker.io/library/node:20-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8
+13:17:51 | DEBUG | #6 [internal] load build context
+13:17:51 | DEBUG | #5 CACHED
+13:17:51 | DEBUG | #5 [builder 2/6] WORKDIR /app
+13:17:51 | DEBUG | #7 [builder 3/6] COPY package.json package-lock.json ./
+13:17:51 | DEBUG | #6 DONE 0.3s
+13:17:51 | DEBUG | #6 transferring context: 3.90MB 0.2s done
+13:17:51 | DEBUG | #7 DONE 0.4s
+13:17:52 | DEBUG | #8 [builder 4/6] RUN npm ci
+13:18:08 | DEBUG | #8 17.04   run `npm fund` for details
+13:18:08 | DEBUG | #8 17.04 76 packages are looking for funding
+13:18:08 | DEBUG | #8 17.04
+13:18:08 | DEBUG | #8 17.04 added 479 packages, and audited 480 packages in 17s
+13:18:08 | DEBUG | #8 17.04
+13:18:09 | DEBUG | #8 17.05 npm notice
+13:18:09 | DEBUG | #8 17.05 npm notice To update run: npm install -g npm@11.10.1
+13:18:09 | DEBUG | #8 17.05 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.1
+13:18:09 | DEBUG | #8 17.05 npm notice New major version of npm available! 10.8.2 -> 11.10.1
+13:18:09 | DEBUG | #8 17.05 npm notice
+13:18:09 | DEBUG | #8 17.05 Run `npm audit` for details.
+13:18:09 | DEBUG | #8 17.05
+13:18:09 | DEBUG | #8 17.05   npm audit fix
+13:18:09 | DEBUG | #8 17.05 To address all issues, run:
+13:18:09 | DEBUG | #8 17.05
+13:18:09 | DEBUG | #8 17.05 5 vulnerabilities (1 low, 1 moderate, 3 high)
+13:18:09 | DEBUG | #8 17.05
+13:18:09 | DEBUG | #8 DONE 17.8s
+13:18:09 | DEBUG | #9 [builder 5/6] COPY . .
+13:18:10 | DEBUG | #9 DONE 0.5s
+13:18:10 | DEBUG | #10 [builder 6/6] RUN npm run build
+13:18:10 | DEBUG | #10 0.326
+13:18:10 | DEBUG | #10 0.326 > tsx script/build.ts
+13:18:10 | DEBUG | #10 0.326 > rest-express@1.0.0 build
+13:18:10 | DEBUG | #10 0.326
+13:18:12 | DEBUG | #10 2.105 building client...
+13:18:12 | DEBUG | #10 2.269 vite v7.3.0 building client environment for production...
+13:18:13 | DEBUG | #10 3.832 transforming...
+13:18:15 | DEBUG | #10 5.790 A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+13:18:15 | DEBUG | #10 5.790
+13:18:18 | DEBUG | #10 7.983 ✓ 1065 modules transformed.
+13:18:18 | INFO | #10 8.453 ✗ Build failed in 5.71s
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/index.css',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/App.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/react-dom/client.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/react/jsx-runtime.js',
+13:18:18 | DEBUG | #10 8.458     '/app/package.json',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/main.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/index.html',
+13:18:18 | DEBUG | #10 8.458   watchFiles: [
+13:18:18 | DEBUG | #10 8.458   hook: 'load',
+13:18:18 | DEBUG | #10 8.458   plugin: 'vite:asset',
+13:18:18 | DEBUG | #10 8.458   pluginCode: 'ENOENT',
+13:18:18 | DEBUG | #10 8.458   path: '/app/attached_assets/Беда_1769444292448.png',
+13:18:18 | DEBUG | #10 8.458   syscall: 'open',
+13:18:18 | DEBUG | #10 8.458   code: 'PLUGIN_ERROR',
+13:18:18 | DEBUG | #10 8.458   errno: -2,
+13:18:18 | DEBUG | #10 8.458     at async Queue.work (/app/node_modules/rollup/dist/es/shared/node-entry.js:22604:32) {
+13:18:18 | DEBUG | #10 8.458     at async <anonymous> (/app/node_modules/rollup/dist/es/shared/node-entry.js:21376:33)
+13:18:18 | DEBUG | #10 8.458     at async PluginDriver.hookFirstAndGetPlugin (/app/node_modules/rollup/dist/es/shared/node-entry.js:22376:28)
+13:18:18 | DEBUG | #10 8.458     at async Object.handler (/app/node_modules/vite/dist/node/chunks/config.js:8671:17)
+13:18:18 | DEBUG | #10 8.458     at async fileToBuiltUrl (/app/node_modules/vite/dist/node/chunks/config.js:8777:18)
+13:18:18 | DEBUG | #10 8.458     at async Object.readFile (node:internal/fs/promises:1236:14)
+13:18:18 | DEBUG | #10 8.458     at async open (node:internal/fs/promises:634:25)
+13:18:18 | DEBUG | #10 8.458 [vite:asset] Could not load /app/attached_assets/Беда_1769444292448.png (imported by client/src/pages/landing.tsx): ENOENT: no such file or directory, open '/app/attached_assets/Беда_1769444292448.png'
+13:18:18 | DEBUG | #10 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+13:18:18 | DEBUG | #10 8.458 }
+13:18:18 | DEBUG | #10 8.458   ]
+13:18:18 | DEBUG | #10 8.458     ... 1018 more items
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/query-core/build/modern/queryCache.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/utils.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/errorBoundaryUtils.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/suspense.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useBaseQuery.js',
+13:18:18 | DEBUG | #10 8.458     'src/assets/images/offer-delivery.png',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/framer-motion/dist/es/index.mjs',
+13:18:18 | DEBUG | #10 8.458     'src/assets/images/offer-ultrasound.png',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/lucide-react/dist/esm/lucide-react.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@radix-ui/react-tooltip/dist/index.mjs',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/scheduler/index.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/wouter/esm/use-browser-location.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/wouter/esm/react-deps.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/regexparam/dist/index.mjs',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useInfiniteQuery.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/isRestoring.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/HydrationBoundary.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useIsFetching.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useMutation.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useMutationState.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/queryOptions.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/QueryErrorResetBoundary.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/infiniteQueryOptions.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/usePrefetchInfiniteQuery.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseQuery.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseQueries.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/usePrefetchQuery.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/types.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/query-core/build/modern/index.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useSuspenseInfiniteQuery.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useQueries.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useQuery.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/react/index.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/react-dom/cjs/react-dom.production.min.js',
+13:18:18 | DEBUG | #10 8.458     '/app/tailwind.config.ts',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/pages/not-found.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/hooks/use-mobile.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/toggle.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/toggle-group.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/toast.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/textarea.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/tabs.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/table.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/switch.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/slider.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/skeleton.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/sidebar.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/sheet.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/separator.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/select.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/scroll-area.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/resizable.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/radio-group.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/progress.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/popover.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/pagination.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/navigation-menu.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/menubar.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/label.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/input.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/input-otp.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/hover-card.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/form.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/dropdown-menu.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/drawer.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/dialog.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/context-menu.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/command.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/collapsible.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/checkbox.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/chart.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/carousel.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/card.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/calendar.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/button.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/breadcrumb.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/badge.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/avatar.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/aspect-ratio.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/alert.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/alert-dialog.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/accordion.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/lib/utils.ts',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/hooks/use-toast.ts',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/pages/landing.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/wouter/esm/index.js',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/tooltip.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/lib/queryClient.ts',
+13:18:18 | DEBUG | #10 8.458     '/app/client/src/components/ui/toaster.tsx',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/react/cjs/react-jsx-runtime.production.min.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/@tanstack/react-query/build/modern/index.js',
+13:18:18 | DEBUG | #10 8.458     '/app/node_modules/react-dom/index.js',
+13:18:18 | DEBUG | 8.458     '/app/node_modules/@tanstack/query-core/build/modern/queryCache.js',
+13:18:18 | DEBUG | 8.458     '/app/node_modules/@tanstack/react-query/build/modern/utils.js',
+13:18:18 | DEBUG | 8.458     '/app/node_modules/@tanstack/react-query/build/modern/errorBoundaryUtils.js',
+13:18:18 | DEBUG | 8.458     '/app/node_modules/@tanstack/react-query/build/modern/suspense.js',
+13:18:18 | DEBUG | 8.458     '/app/node_modules/@tanstack/react-query/build/modern/useBaseQuery.js',
+13:18:18 | DEBUG | 8.458     'src/assets/images/offer-delivery.png',
+13:18:18 | DEBUG | 8.458     '/app/node_modules/framer-motion/dist/es/index.mjs',
+13:18:18 | DEBUG | > [builder 6/6] RUN npm run build:
+13:18:18 | DEBUG | ------
+13:18:18 | INFO | error: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+13:18:18 | DEBUG | --------------------
+13:18:18 | DEBUG | 11 |     FROM node:20-alpine AS runner
+13:18:18 | DEBUG | 10 |
+13:18:18 | DEBUG | 9 | >>> RUN npm run build
+13:18:18 | DEBUG | 8 |     COPY . .
+13:18:18 | DEBUG | 7 |
+13:18:18 | DEBUG | --------------------
+13:18:18 | DEBUG | Dockerfile:9
+13:18:18 | DEBUG | ------
+13:18:18 | DEBUG | 8.458 }
+13:18:18 | DEBUG | 8.458   ]
+13:18:18 | DEBUG | 8.458     ... 1018 more items
+13:18:18 | INFO | Build failed
